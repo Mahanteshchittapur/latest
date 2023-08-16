@@ -8,7 +8,6 @@ window.onload = function() {
 
 function loadAAMPVideo() {
     var video = document.getElementById("video");
-     header.style.display = "none";
     video.src = url;
     video.play();
     video.style.display = "block";
