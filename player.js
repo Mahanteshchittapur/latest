@@ -1,4 +1,4 @@
- var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+   var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
         var player;
 
         window.onload = function() {
@@ -15,13 +15,19 @@
 
         function openFullscreen(element) {
             if (element.requestFullscreen) {
-                element.requestFullscreen();
+                element.requestFullscreen().catch(error => {
+                    console.error('Error attempting to enable full-screen mode:', error);
+                });
             } else if (element.mozRequestFullScreen) { // Firefox
                 element.mozRequestFullScreen();
             } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                element.webkitRequestFullscreen();
+                element.webkitRequestFullscreen().catch(error => {
+                    console.error('Error attempting to enable full-screen mode:', error);
+                });
             } else if (element.msRequestFullscreen) { // IE/Edge
-                element.msRequestFullscreen();
+                element.msRequestFullscreen().catch(error => {
+                    console.error('Error attempting to enable full-screen mode:', error);
+                });
             }
         }
 
@@ -34,6 +40,42 @@
                 loadAAMPVideo();
             }
         });
+// var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+ //        var player;
+
+ //        window.onload = function() {
+ //            player = new AAMPMediaPlayer();
+ //        }
+
+ //        function loadAAMPVideo() {
+ //            var video = document.getElementById("video");
+ //            video.src = url;
+ //            video.play();
+ //            video.style.display = "block";
+ //            openFullscreen(video);
+ //        }
+
+ //        function openFullscreen(element) {
+ //            if (element.requestFullscreen) {
+ //                element.requestFullscreen();
+ //            } else if (element.mozRequestFullScreen) { // Firefox
+ //                element.mozRequestFullScreen();
+ //            } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+ //                element.webkitRequestFullscreen();
+ //            } else if (element.msRequestFullscreen) { // IE/Edge
+ //                element.msRequestFullscreen();
+ //            }
+ //        }
+
+ //        var playButton = document.getElementById("playButton");
+
+ //        playButton.addEventListener("click", loadAAMPVideo);
+
+ //        document.addEventListener("keydown", function(event) {
+ //            if (event.keyCode === 13) { // Enter key
+ //                loadAAMPVideo();
+ //            }
+ //        });
 
 
 
