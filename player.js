@@ -54,6 +54,7 @@ function loadAAMPVideo() {
 
     var languagesContainer = document.getElementById("languagesContainer");
  var playbtn = document.querySelector(".play-btn");
+  var ctn = document.querySelector(".contain");
 
  
 
@@ -64,6 +65,9 @@ function loadAAMPVideo() {
     languagesContainer.style.display = "none";
 
     playbtn.style.display = "none";
+  ctn.style.display = "none";
+ 
+ 
 
 }
 
