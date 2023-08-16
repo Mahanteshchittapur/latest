@@ -1,5 +1,5 @@
 var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
-let header = document.getElementByClass("header");
+let header = document.getElementByClassName("header");
 var player;
 
 window.onload = function() {
