@@ -225,7 +225,7 @@ video {
     margin-bottom: 20px;
     justify-content: space-between;
  }
-.video-container {
+/* .video-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -236,20 +236,20 @@ video {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-}
+} */
 
 
 
- /* .video-container {
+ .video-container {
    position: relative;
    max-width: 800px;
    margin: 0 auto;
-} */
+}
 
-.dash-video {
+/* .dash-video {
    width: 100%;
    height: auto;
-}
+} */
 
 .play-button {
     position: absolute;
