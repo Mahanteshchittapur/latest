@@ -215,6 +215,16 @@ video {
     background-color: #192133;
     color: white;
  }
+ .video-card-container {
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    justify-content: space-between;
+ }
 .video-container {
     position: fixed;
     top: 0;
@@ -228,16 +238,7 @@ video {
     z-index: 9999;
 }
 
-/*  .video-card-container {
-    position: relative;
-    width: 92%;
-    margin: auto;
-    height: 10vw;
-    display: flex;
-    margin-top: 1rem;
-    margin-bottom: 20px;
-    justify-content: space-between;
- } */
+
 
  /* .video-container {
    position: relative;
