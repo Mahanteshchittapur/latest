@@ -1,68 +1,68 @@
- var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
-        var player;
+ // var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+ //        var player;
 
-        window.onload = function() {
-            player = new AAMPMediaPlayer();
-        }
+ //        window.onload = function() {
+ //            player = new AAMPMediaPlayer();
+ //        }
 
-        function loadAAMPVideo() {
-            var video = document.getElementById("video");
-            video.src = url;
-            video.play();
-            video.style.display = "block";
-            openFullscreen(video);
-        }
+ //        function loadAAMPVideo() {
+ //            var video = document.getElementById("video");
+ //            video.src = url;
+ //            video.play();
+ //            video.style.display = "block";
+ //            openFullscreen(video);
+ //        }
 
-        function openFullscreen(element) {
-            if (element.requestFullscreen) {
-                element.requestFullscreen();
-            } else if (element.mozRequestFullScreen) { // Firefox
-                element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                element.webkitRequestFullscreen();
-            } else if (element.msRequestFullscreen) { // IE/Edge
-                element.msRequestFullscreen();
-            }
-        }
+ //        function openFullscreen(element) {
+ //            if (element.requestFullscreen) {
+ //                element.requestFullscreen();
+ //            } else if (element.mozRequestFullScreen) { // Firefox
+ //                element.mozRequestFullScreen();
+ //            } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+ //                element.webkitRequestFullscreen();
+ //            } else if (element.msRequestFullscreen) { // IE/Edge
+ //                element.msRequestFullscreen();
+ //            }
+ //        }
 
-        var playButton = document.getElementById("playButton");
+ //        var playButton = document.getElementById("playButton");
 
-        playButton.addEventListener("click", loadAAMPVideo);
+ //        playButton.addEventListener("click", loadAAMPVideo);
 
-        document.addEventListener("keydown", function(event) {
-            if (event.keyCode === 13) { // Enter key
-                loadAAMPVideo();
-            }
-        });
+ //        document.addEventListener("keydown", function(event) {
+ //            if (event.keyCode === 13) { // Enter key
+ //                loadAAMPVideo();
+ //            }
+ //        });
 
 
 
 
 
 //ooooo
-// var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
-// // let header = document.getElementByClassName("header");
-// var player;
+var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+// let header = document.getElementByClassName("header");
+var player;
 
-// window.onload = function() {
-//     player = new AAMPMediaPlayer();
-// }
+window.onload = function() {
+    player = new AAMPMediaPlayer();
+}
 
-// function loadAAMPVideo() {
-//     var video = document.getElementById("video");
-//     video.src = url;
-//     video.play();
-//     video.style.display = "block";
+function loadAAMPVideo() {
+    var video = document.getElementById("video");
+    video.src = url;
+    video.play();
+    video.style.display = "block";
    
-// }
+}
 
-// var playButton = document.getElementById("playButton");
+var playButton = document.getElementById("playButton");
 
-// playButton.addEventListener("keydown", function(event) {
-//     if (event.keyCode === 13) { // Enter key
-//         loadAAMPVideo();
-//     }
-// });
+playButton.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) { // Enter key
+        loadAAMPVideo();
+    }
+});
 
 //  // Get references to the video element and the play button
 // const url = "https://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
