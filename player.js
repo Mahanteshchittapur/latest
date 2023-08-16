@@ -1,33 +1,83 @@
-   var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+
 var player;
 
+ 
+
 window.onload = function() {
+
     player = new AAMPMediaPlayer();
+
 }
+
+ 
 
 function loadAAMPVideo() {
-    var videoContainer = document.querySelector(".video-container");
+
     var video = document.getElementById("video");
-    
+
     video.src = url;
+
     video.play();
-    
-    videoContainer.style.display = "flex"; // Show the video container
-    openFullscreen(video);
+
+    video.style.display = "block";
+
+ 
+
+    // Request full screen mode
+
+    if (video.requestFullscreen) {
+
+        video.requestFullscreen();
+
+    } else if (video.mozRequestFullScreen) {
+
+        video.mozRequestFullScreen();
+
+    } else if (video.webkitRequestFullscreen) {
+
+        video.webkitRequestFullscreen();
+
+    } else if (video.msRequestFullscreen) {
+
+        video.msRequestFullscreen();
+
+    }
+
+ 
+
+    // Hide specified sections
+
+    var header = document.querySelector(".header");
+
+    var carouselContainer = document.getElementById("carouselContainer");
+
+    var languagesContainer = document.getElementById("languagesContainer");
+
+ 
+
+    header.style.display = "none";
+
+    carouselContainer.style.display = "none";
+
+    languagesContainer.style.display = "none";
+
 }
 
-function openFullscreen(element) {
-    // ... (your openFullscreen code remains the same)
-}
+ 
 
 var playButton = document.getElementById("playButton");
 
-playButton.addEventListener("click", loadAAMPVideo);
+ 
 
-document.addEventListener("keydown", function(event) {
+playButton.addEventListener("keydown", function(event) {
+
     if (event.keyCode === 13) { // Enter key
+
         loadAAMPVideo();
+
     }
+
 });
 // var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
    //      var player;
