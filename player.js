@@ -1,45 +1,76 @@
    var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
-        var player;
+var player;
 
-        window.onload = function() {
-            player = new AAMPMediaPlayer();
-        }
+window.onload = function() {
+    player = new AAMPMediaPlayer();
+}
 
-        function loadAAMPVideo() {
-            var video = document.getElementById("video");
-            video.src = url;
-            video.play();
-            video.style.display = "block";
-            openFullscreen(video);
-        }
+function loadAAMPVideo() {
+    var videoContainer = document.querySelector(".video-container");
+    var video = document.getElementById("video");
+    
+    video.src = url;
+    video.play();
+    
+    videoContainer.style.display = "flex"; // Show the video container
+    openFullscreen(video);
+}
 
-        function openFullscreen(element) {
-            if (element.requestFullscreen) {
-                element.requestFullscreen().catch(error => {
-                    console.error('Error attempting to enable full-screen mode:', error);
-                });
-            } else if (element.mozRequestFullScreen) { // Firefox
-                element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                element.webkitRequestFullscreen().catch(error => {
-                    console.error('Error attempting to enable full-screen mode:', error);
-                });
-            } else if (element.msRequestFullscreen) { // IE/Edge
-                element.msRequestFullscreen().catch(error => {
-                    console.error('Error attempting to enable full-screen mode:', error);
-                });
-            }
-        }
+function openFullscreen(element) {
+    // ... (your openFullscreen code remains the same)
+}
 
-        var playButton = document.getElementById("playButton");
+var playButton = document.getElementById("playButton");
 
-        playButton.addEventListener("click", loadAAMPVideo);
+playButton.addEventListener("click", loadAAMPVideo);
 
-        document.addEventListener("keydown", function(event) {
-            if (event.keyCode === 13) { // Enter key
-                loadAAMPVideo();
-            }
-        });
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) { // Enter key
+        loadAAMPVideo();
+    }
+});
+// var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+   //      var player;
+
+   //      window.onload = function() {
+   //          player = new AAMPMediaPlayer();
+   //      }
+
+   //      function loadAAMPVideo() {
+   //          var video = document.getElementById("video");
+   //          video.src = url;
+   //          video.play();
+   //          video.style.display = "block";
+   //          openFullscreen(video);
+   //      }
+
+   //      function openFullscreen(element) {
+   //          if (element.requestFullscreen) {
+   //              element.requestFullscreen().catch(error => {
+   //                  console.error('Error attempting to enable full-screen mode:', error);
+   //              });
+   //          } else if (element.mozRequestFullScreen) { // Firefox
+   //              element.mozRequestFullScreen();
+   //          } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+   //              element.webkitRequestFullscreen().catch(error => {
+   //                  console.error('Error attempting to enable full-screen mode:', error);
+   //              });
+   //          } else if (element.msRequestFullscreen) { // IE/Edge
+   //              element.msRequestFullscreen().catch(error => {
+   //                  console.error('Error attempting to enable full-screen mode:', error);
+   //              });
+   //          }
+   //      }
+
+   //      var playButton = document.getElementById("playButton");
+
+   //      playButton.addEventListener("click", loadAAMPVideo);
+
+   //      document.addEventListener("keydown", function(event) {
+   //          if (event.keyCode === 13) { // Enter key
+   //              loadAAMPVideo();
+   //          }
+   //      });
 // var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
  //        var player;
 
