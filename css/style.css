@@ -33,20 +33,7 @@ video {
     height: auto;
     display: none;
 }
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    position: relative;
-    font-family: sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color: white;
-    background-color: #000;
-}
 /* body {
    display: flex;
    justify-content: center;
@@ -56,32 +43,7 @@ body {
    background-color: #080808;
 } */
 
-#container {
-   text-align: center;
-   padding: 20px;
-   border: 1px solid #ccc;
-   background-color: white;
-}
 
-button {
-   background-color: #007bff;
-   color: white;
-   border: none;
-   padding: 10px 20px;
-   font-size: 16px;
-   cursor: pointer;
-}
-
-button:focus {
-   outline: none;
-   border: 2px solid #007bff;
-}
-
-.video {
-   max-width: 100%;
-   height: auto;
-   display: none;
-}
 
 
 
