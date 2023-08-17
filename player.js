@@ -53,7 +53,7 @@ function loadAAMPVideo() {
     var carouselContainer = document.getElementById("carouselContainer");
 
     var languagesContainer = document.getElementById("languagesContainer");
- var playbtn = document.querySelector(".play-btn");
+ // var playbtn = document.querySelector(".play-btn");
   
 
  
@@ -64,7 +64,7 @@ function loadAAMPVideo() {
 
     languagesContainer.style.display = "none";
 
-    playbtn.style.display = "none";
+    // playbtn.style.display = "none";
   
  
  
